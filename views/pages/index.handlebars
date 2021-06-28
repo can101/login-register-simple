@@ -1,0 +1,17 @@
+
+
+<div class="card mt-5">
+  <h5 class="cart-header">Registred Users</h5>
+  <div class="card-body">
+    
+    <ul class="list-group">
+      {{#each users}}
+          <li class="list-group-item text-danger">{{this}}</li>
+      {{else}}
+      <div class="alert alert-info">
+        There is No Registred User!
+      </div>
+      {{/each}}
+    </ul>
+  </div>
+</div>

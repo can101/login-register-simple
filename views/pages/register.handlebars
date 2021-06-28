@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: #f5f5f5;
+    }
+
+    .form-signin {
+      width: 100%;
+      max-width: 330px;
+      padding: 15px;
+      margin: auto;
+    }
+
+    .form-signin .checkbox {
+      font-weight: 400;
+    }
+
+    .form-signin .form-floating:focus-within {
+      z-index: 2;
+    }
+
+    .form-signin input[type="email"] {
+      margin-bottom: -1px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .form-signin input[type="password"] {
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+{{> _errors}}
+  <main class="form-signin">
+    <form action="/register" method="POST">
+      <div class="d-flex justify-content-center">
+        <img class="mb-4"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png"
+          alt="" width="72" height="57">
+      </div>
+      <h1 class="h3 mb-3 fw-normal text-center">Register</h1>
+
+      <div class="form-floating">
+        <input type="text" name="username" class="form-control" id="username" value="{{username}}" placeholder="username">
+        <label for="username">User Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" name="password" class="form-control" id="password" value="{{password}}" placeholder="Password">
+        <label for="password">Password</label>
+      </div>
+
+    
+      <button class="w-100 btn btn-lg btn-warning" type="submit">Register</button>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; 2017–2021</p>
+    </form>
+  </main>
+</body>
+
+</html>
